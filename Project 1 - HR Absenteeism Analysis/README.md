@@ -4,20 +4,20 @@
 
 This project analyses workplace absenteeism using employee demographics, lifestyle choices and compensation data. Furthermore, the HR department is looking to promote a healthy workforce through incentive programs like a bonus. Specifically, they aim to identify healthy employees with low absenteeism for a health bonus and evaluate compensation adjustments for non-smokers.
 
-Data was cleaned and analysed using SQL, and key trends and insights was visualized and presented in Power BI through interactive dashboards.
+Data was cleaned and analysed, and key trends and insights was extracted using Python.
 
 ## [Python Script](https://github.com/Trevor20/Python-Portfolio/blob/main/Project%201%20-%20HR%20Absenteeism%20Analysis/python/Absenteeism_ETL_EDA.ipynb)
 
 ## 🧠 Business Problem
 
-Employee absenteeism directly affects productivity and efficiency. The HR department wants to understand the major reasons of absenteeism and identify areas where intervention - through wellness programs and compensation changes - can reduce unplanned leave and encourage healthier employee behaviour.
+Employee absenteeism directly affects productivity and efficiency. The HR department wants to understand the major reasons of absenteeism and identify areas where intervention, through wellness programs and compensation changes, can reduce unplanned leave and encourage healthier employee behaviour.
 
 ## 🎯 Objectives 
 
 1. HR wants the following information for their incentive programs
    - Provide a list of healthy individuals and low absenteeism for a health bonus program.
    - Calculate wage increase for non-smokers - budget $983,221
-2. Develop a Power BI dashboard to help HR understand key absenteeism patterns accross time, demographics and lifestyle
+2. Analyse employee data so the HR can understand key absenteeism patterns accross time, demographics and lifestyle
    - Absenteeism Overview - Key trends, Absenteeism Distribution and top reasons for being absent 
    - Absenteeism Factors - Analysis of how compensation, disciplinary failure and social lifestyle (Smoker, Drinker, BMI and no of degrees, pets and children) impact absenteeism.
 
@@ -31,19 +31,16 @@ The dataset includes information on:
 
 The data is anonymized and provided in CSV format. The dataset has 740 records.
 
-## 🧰 Tools Used
-- MySQL - For data cleaning, joins and transformations using SQL queries and views
-- Power BI - For interactive dashboard creation and data visualization
-- DAX - For calculated measures, KPIs and time-based metrics
-- Data Modelling - Star schema and relationship setup between data tables
+## 🧰 Tools Used in Python
+- Pandas - To read csv files and data transformation
+- Numpy - For statistical operations like mean and sum
+- Matplotlib.pyplot - For creating customizable plots
+- Seaborn - For creating quick, statistical plots
+- Calendar - To extract date based characteristics like day and month number
 
-## 📁 Database
+## 📂 Data Structure
 
-The database was created in MySQL and the dataset was imported. The questions from HR was answered using SQL queries. A View was created in MySQL with relevant data required for absenteeism analysis. The view was connected to Power BI and an interactive dashboard was created.
-
-## 📂 Database Structure
-
-Three tables were created in MySQL
+The initial data has 3 tables
 
 ### 1. Compensation
 | Column  | Description                    |
@@ -97,14 +94,14 @@ Three tables were created in MySQL
 
 ## ➡️ Project Approach
 
-### 1. Data preparation in MySQL
-1. Data from CSV files was loaded into MySQL using Table Data Import Wizard.
-2. Questions from HR was answered using SELECT and JOIN.
-3. A VIEW was created with relevant data for dashboarding.
-4. Connected Power BI to MySQL using Direct Query to create interactive dashboards.
+### 1. ETL using pandas and numpy
+1. Data from CSV files was extracted using read_csv().
+2. BMI category and season columns was created 
+3. 3 tables waas merged into 1 using .merge()
+4. After merge, relevant columns was selected for EDA
 
-### 2. Dashboard Development in Power BI
-The dashboard has the following main Attributes
+### 2. EDA using matplotlib.pyplot, seaborn and calendar
+Insights was derived by creating the following graphs
 1. Page 1 - Absenteeism Overview
       - KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
       - Time-series analysis - tracks when employees take leaves
