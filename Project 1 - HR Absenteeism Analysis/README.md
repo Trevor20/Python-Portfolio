@@ -6,7 +6,7 @@ This project analyses workplace absenteeism using employee demographics, lifesty
 
 Data was cleaned and analysed, and key trends and insights was extracted using Python.
 
-## [Python Script](https://github.com/Trevor20/Python-Portfolio/blob/main/Project%201%20-%20HR%20Absenteeism%20Analysis/python/Absenteeism_ETL_EDA.ipynb)
+## [Python Script](https://github.com/Trevor20/Python-Portfolio/blob/main/Project%201%20-%20HR%20Absenteeism%20Analysis/Absenteeism_ETL_EDA.ipynb)
 
 ## 🧠 Business Problem
 
