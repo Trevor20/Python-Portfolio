@@ -6,7 +6,7 @@ This project analyses workplace absenteeism using employee demographics, lifesty
 
 Data was cleaned and analysed using SQL, and key trends and insights was visualized and presented in Power BI through interactive dashboards.
 
-## [Report](https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project1-HRAbsenteesim/report)
+## [Python Script](https://github.com/Trevor20/SQL-PowerBI-Portfolio/tree/main/projects/Project1-HRAbsenteesim/report)
 
 ## 🧠 Business Problem
 
