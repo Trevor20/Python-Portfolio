@@ -116,7 +116,7 @@ Insights was derived by creating the following graphs
 - 📈 Non-Smokers are eligible for a wage increase of approx $1433.
 - 📆 March sees the highest number of absentees; Thursdays the lowest.
 - 🦾 Over 50% of employees taking leave are in the healthy BMI range.
-- 🧔 Significant absent hours come from the 31-34 age group.
+- 🧔 Significant absent hours come from the 27-34 age group.
 - 🦷 Medical and dental consultations make up majority of the leaves.
 - 💰 There is a slight positive correlation between compensation/hour and absent hours
 - 0️⃣ No one who had a disciplinary failure took leave
