@@ -8,12 +8,17 @@ This project involves the development of en end-to-end data pipeline to process,
 
 ## 🧠 Business Problem
 
-Financial institutions often deal with bad system-generated data where technical glitches, manual entry errors, and processing delays results in uncertain performance. For this case, the organization faced 3 primary challenges:
+Financial institutions often deal with bad system-generated data where technical glitches, manual entry errors, and processing delays results in false performance. For this case, the organization faced 3 primary challenges:
 
 1. Data Decay - A significant portion of the transaction ledger was corrupted with errors, missing identifiers (Customer ID) and illogical values (negative values), leading to unaccounted revenue
-2. Settlement issue
+2. Settlement issue - A large volume of "Pending" transactions (approx. 20%) created uncertainty in cash flow forecasting, with no clear system to prioritize high-risk delays
+3. Predictive Uncertainty - Management lacked insights into whether transaction failures were driven by customer behavior or external system failures
 
 ## 🎯 Objectives 
+
+1. Data Cleaning & Transformation - Implement a ETL framework to clean and standardize over 60% of corrupted records
+2. Integrity Auditing - Create an "Audit" dataset to isolate missing uncertain recording (missing IDs/transaction status) for manual auditing, ensuring 100% data integrity for the modelling set.
+3. Risk Categorization - Develop a multi-tier risk classification (Critical, Delayed, Current) based on transaction aging to provide actionable tasks for the operations team
 
 1. HR wants the following information for their incentive programs
    - Provide a list of healthy individuals and low absenteeism for a health bonus program.
