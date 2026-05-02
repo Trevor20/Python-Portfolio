@@ -48,37 +48,22 @@ The initial data has 1 table with 100k records
 | Payment_Method     | Method used to make the payment (Cash, Credit Card, etc) |
 | Transaction_Status | Status of transction (Completed, Failed, Pending)        |
 
-
-## 🔍 Key Business Questions Answered
-
-1. Who are the healthy individuals with low absenteeism eligible for a health bonus program?
-2. Calculate wage increase for non-smokers. Budget is $983,221.
-3. How does absenteeism vary accross weekdays and months?
-4. What are the top reasons employees take leave?
-5. Is there a correlatiion between age or compensation and absent hours?
-6. Does lifestyle(Smoking, drinking, education, children, pets) influence absenteeism?
-7. Does having a disciplinary failure impact hours absent?
-8. Does BMI impact absenteeism?
-
 ## ➡️ Project Approach
 
-### 1. ETL using pandas and numpy
-1. Data from CSV files was extracted using read_csv().
-2. BMI category and season columns was created 
-3. 3 tables waas merged into 1 using .merge()
-4. After merge, relevant columns was selected for EDA
+### 1. Data Engineering & ETL using pandas and numpy
+1. Data from the CSV file was extracted using read_csv().
+2. Developed a custom cleaning engine in Python using Regex to reconstruct corrupted dates, achieving a 64% recovery rate on previously unusable data.
+3. Standardized product categories using dictionaries to fix manual entry keystroke errors
+4. Handled financial anomalies (negative price/quantity) and outliers by implementing category-specific median imputation, ensuring the data remained feasible.
 
-### 2. EDA using matplotlib.pyplot, seaborn and calendar
-Insights was derived by creating the following graphs
-1. Page 1 - Absenteeism Overview
-      - KPI - Summary of relevent KPIs like total employees, average time absent, % of smokers/drinkers, etc
-      - Time-series analysis - tracks when employees take leaves
-      - Employee demographics - Determines employee body factors (BMI, age) that tend to take more leaves
-      - Top reasons - table that indicates primary absent causes
-3. Page 2 - Absenteeism Factors
-     - Work factors - graphs that indicate whether disciplinary failure and compensation/hr are related to absenteeism
-     - Social factors - Provide insights into what social factors affect absenteeism
-     - Health factors - Column charts that indicade whether BMI or smoker/drinker affect absenteeism 
+### 2. Machine Learning Validation using skilearn
+1. Executed a Logistic Regression model to test the hypothesis that transaction failure could be predicted by customer variables like Price, Category, or Payment Method.
+2. Utilized class_weight = 'balanced' and stratify to handle class imbalance (3:1 Succcess:Failure ratio).
+3. Finding - The model yielded an AUC of 0.5, successfulling proving that failures in this dataset are likely due to internal API/Bank factors rather that customer-based factors.
+
+### 3. Database Architecture & Visualization
+1. Developed a 3-tier storage system in MySQL to seperate clean historical data, pending unprocessed data, and system audit logs.
+2. Developed an interactive Power BI dashboard that pivoted from the inconclusive ML model to Heuristic Risk Model, using transaction aging buckets to flag $972M in critical revenue leakage 
 
 ## 🏆 Final Insights
 - 📈 Non-Smokers are eligible for a wage increase of approx $1433.
