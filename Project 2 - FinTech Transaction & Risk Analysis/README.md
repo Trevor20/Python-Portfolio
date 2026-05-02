@@ -29,6 +29,8 @@ Financial institutions often deal with bad system-generated data where technical
 - Getpass - For handling sensitive passwords to databases
 - Sqlalchemy - To integrate python and MySQL
 - Sklearn - For predicting data and evaluating the prediction model
+2. MySQL - For storing cleaned and auditing data
+3. Power BI - For creating interactive visualizations 
 
 ## 📂 Data Structure
 
