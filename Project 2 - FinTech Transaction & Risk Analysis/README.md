@@ -16,76 +16,36 @@ Financial institutions often deal with bad system-generated data where technical
 
 ## 🎯 Objectives 
 
-1. Data Cleaning & Transformation - Implement a ETL framework to clean and standardize over 60% of corrupted records
-2. Integrity Auditing - Create an "Audit" dataset to isolate missing uncertain recording (missing IDs/transaction status) for manual auditing, ensuring 100% data integrity for the modelling set.
-3. Risk Categorization - Develop a multi-tier risk classification (Critical, Delayed, Current) based on transaction aging to provide actionable tasks for the operations team
+- Data Cleaning & Transformation - Implement a ETL framework to clean and standardize over 60% of corrupted records
+- Integrity Auditing - Create an "Audit" dataset to isolate missing uncertain recording (missing IDs/transaction status) for manual auditing, ensuring 100% data integrity for the modelling set.
+- Risk Categorization - Develop a multi-tier risk classification (Critical, Delayed, Current) based on transaction aging to provide actionable tasks for the operations team
+- Statistical Validation - Execute a multivariate Logistic Regression analysis to test the correlation between transaction features and outcomes, providing a data-backed recommendation on future feature engineering needs
+- Stakeholder Visualisation - Deliver a 2-page interactive Power BI Dashboard that translates raw technical metrics into strategic insights regarding revenue at risk and system health
 
-1. HR wants the following information for their incentive programs
-   - Provide a list of healthy individuals and low absenteeism for a health bonus program.
-   - Calculate wage increase for non-smokers - budget $983,221
-2. Analyse employee data so the HR can understand key absenteeism patterns accross time, demographics and lifestyle
-   - Absenteeism Overview - Key trends, Absenteeism Distribution and top reasons for being absent 
-   - Absenteeism Factors - Analysis of how compensation, disciplinary failure and social lifestyle (Smoker, Drinker, BMI and no of degrees, pets and children) impact absenteeism.
-
-## 📖 Dataset
-
-The dataset includes information on:
-- Demographics: Age, education, BMI, children, pets
-- Compensation: Compensation per hour
-- Lifestyle: Smoking, drinking habits
-- Absenteeism: Reasons, number of hours, days of the week, and months
-
-The data is anonymized and provided in CSV format. The dataset has 740 records.
-
-## 🧰 Tools Used in Python
+## 🧰 Tools Used
+1. Python - For cleaning, transformation, integration with MySQL and prediction
 - Pandas - To read csv files and data transformation
 - Numpy - For statistical operations like mean and sum
-- Matplotlib.pyplot - For creating customizable plots
-- Seaborn - For creating quick, statistical plots
-- Calendar - To extract date based characteristics like day and month number
+- Getpass - For handling sensitive passwords to databases
+- Sqlalchemy - To integrate python and MySQL
+- Sklearn - For predicting data and evaluating the prediction model
 
 ## 📂 Data Structure
 
-The initial data has 3 tables
+The initial data has 1 table with 100k records
 
-### 1. Compensation
-| Column  | Description                    |
-|---------|--------------------------------|
-| Id      | Unique employee Id             |
-| Comp/hr | Compensation per hour ($/hour) |
+### 1. Financial_Transactions
+| Column             | Description                                              |
+|--------------------|----------------------------------------------------------|
+| Transaction_ID     | Unique transaction id                                    |
+| Transaction_Date   | Date on which the transaction occured                    |
+| Customer_ID        | Customer who made the transaction                        |
+| Product_Name       | Items purchased                                          |
+| Quantity           | Amount of line item purchased                            |
+| Price              | Unit price of line item                                  | 
+| Payment_Method     | Method used to make the payment (Cash, Credit Card, etc) |
+| Transaction_Status | Status of transction (Completed, Failed, Pending)        |
 
-
-### 2. Absent_Data
-| Column | Description             |
-|--------|-------------------------|
-| Number | Unique Reason Id        |
-| Reason | Reason for being absent |
-
-
-### 3. Absent_Data
-| Column                          | Description                                   |
-|---------------------------------|-----------------------------------------------|
-| Id                              | Unique Employee Id                            |
-| Reason for absence              | Reason Id                                     |
-| Month of Absence                | Month the employee was absent                 |
-| Day of the week                 | Day the employee was absent                   |
-| Seasons                         | Source had no info, data is ambiguous         |
-| Transportation expense          | Cost to travel from home to office            |
-| Distance From residence to work | Distance to work                              |
-| Service time                    | Source had no info, data is ambiguous         |
-| Age                             | Age of employee                               |
-| Work load average/day           | Source had no info, data is ambiguous         |
-| Hit target                      | Source had no info, data is ambiguous         |
-| Disciplinary failure            | Whether employee had performance issues (0/1) |
-| Education                       | No of education degrees                       |
-| Son                             | No of Children                                |
-| Social Drinker                  | Whether the employee drinks (1/0)             |
-| Social Smoker                   | Whether the employee smokes (1/0)             |
-| Pet                             | No of pets                                    |
-| Weight                          | Employee weight                               |
-| Height                          | Employee height                               |
-| Body mass index                 | Division of weight by height. Also called BMI |
-| Absenteeism time in hours       | Total hours the employee was absent           |
 
 ## 🔍 Key Business Questions Answered
 
