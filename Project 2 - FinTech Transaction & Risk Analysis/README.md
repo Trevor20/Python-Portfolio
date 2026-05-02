@@ -66,12 +66,12 @@ The initial data has 1 table with 100k records
 2. Developed an interactive Power BI dashboard that pivoted from the inconclusive ML model to Heuristic Risk Model, using transaction aging buckets to flag $972M in critical revenue leakage 
 
 ## 🏆 Final Insights
-- 📈 Non-Smokers are eligible for a wage increase of approx $1433.
+- 📈 The hiddle failure - By isolating the missing Customer ID and status, the analysis discovered that 5% of the total volume is untraceble. In a live environment, this would represent a massive compliance and data goverance failure.
 - 📆 Friday Anomaly - Data visualization revealed an extreme concentration of both revenue and transactions on Fridays, suggesting a batch-processing system rather than real-time settlement.
-- 🦾 Over 50% of employees taking leave are in the healthy BMI range.
-- 🧔 Significant absent hours come from the 27-34 age group.
-- 🦷 Medical and dental consultations make up majority of the leaves.
-- 💰 Revenue at risk - While the total revenue apprears healthy at $2.91bn, the Operational Audit identified nearly $1bn (approx. 25%) currently sitting in the audit states. 
-- 0️⃣ No one who had a disciplinary failure took leave
-- 🍹 Employees who drink but do not smoke had the highest absent hours.
+- 🧔 Non-Deterministic Outcomes - The failure of the Logistic Regression model to find a signal in user-facing variables (Price, Payment Method, etc) provides a critical insight that the organization should stop optimizing user variables and focus on backend API reliability and banking gateway efficiency
+- 💰 Revenue at risk - While the total revenue apprears healthy at $2.91bn, the Operational Audit identified nearly $1bn (approx. 25% total) currently sitting in the audit state. This represents significant liquidity risk that was previously invisible in the raw dataset 
 
+## 🏳️ Conclusion
+The FinTech Transcations & Risk Analysis project demonstrates that data value isn't just found in perfect models, but in the ability to identify and mitigate sytem failures.
+
+By building this pipeline, I successfully transformed 100k rows of corrupted data into a functional business tool. The project's net value was not in predicting the future throught machine learning, but in providing transparency. I uncovered that 5% of transactions were untracable due to missing IDs and statues and identified nearly $1bn in pending revenue that required immediate operational intervention. This project is proof of how technical data engineering can drive high-stakes financial decision-making, even when faced with significant data quality challenges.
