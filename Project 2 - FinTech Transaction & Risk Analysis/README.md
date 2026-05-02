@@ -59,7 +59,7 @@ The initial data has 1 table with 100k records
 ### 2. Machine Learning Validation using skilearn
 1. Executed a Logistic Regression model to test the hypothesis that transaction failure could be predicted by customer variables like Price, Category, or Payment Method.
 2. Utilized class_weight = 'balanced' and stratify to handle class imbalance (3:1 Succcess:Failure ratio).
-3. Finding - The model yielded an AUC of 0.5, successfulling proving that failures in this dataset are likely due to internal API/Bank factors rather that customer-based factors.
+3. Finding - The model yielded an accuracy of 0.5, successfully proving that failures in this dataset are likely due to internal API/Bank factors rather that customer-based factors.
 
 ### 3. Database Architecture & Visualization
 1. Developed a 3-tier storage system in MySQL to seperate clean historical data, pending unprocessed data, and system audit logs.
@@ -67,11 +67,11 @@ The initial data has 1 table with 100k records
 
 ## 🏆 Final Insights
 - 📈 Non-Smokers are eligible for a wage increase of approx $1433.
-- 📆 March sees the highest number of absentees; Thursdays the lowest.
+- 📆 Friday Anomaly - Data visualization revealed an extreme concentration of both revenue and transactions on Fridays, suggesting a batch-processing system rather than real-time settlement.
 - 🦾 Over 50% of employees taking leave are in the healthy BMI range.
 - 🧔 Significant absent hours come from the 27-34 age group.
 - 🦷 Medical and dental consultations make up majority of the leaves.
-- 💰 There is a slight positive correlation between compensation/hour and absent hours
+- 💰 Revenue at risk - While the total revenue apprears healthy at $2.91bn, the Operational Audit identified nearly $1bn (approx. 25%) currently sitting in the audit states. 
 - 0️⃣ No one who had a disciplinary failure took leave
 - 🍹 Employees who drink but do not smoke had the highest absent hours.
 
