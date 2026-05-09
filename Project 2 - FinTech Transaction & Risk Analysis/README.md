@@ -4,7 +4,7 @@
 
 This project involves the development of en end-to-end data pipeline to process, clean, and analyze a high-volume transactional dataset(100k records). The pipeline integrates Python for complex ETL(Extract, Transform, Load) and data quality auditing, MySQL for relational data storage, and Power BI for executive-level visualization of current state and risk. Another component was an evaluation of a Logistic Regression model to determine the predictability of transaction success, which informed a strategic focus on time-based risk
 
-## [Python Script](https://github.com/Trevor20/Python-Portfolio/blob/main/Project%201%20-%20HR%20Absenteeism%20Analysis/Absenteeism_ETL_EDA.ipynb)
+## [Python Script](https://github.com/Trevor20/Python-Portfolio/blob/main/Project%202%20-%20FinTech%20Transaction%20%26%20Risk%20Analysis/scripts/ETL%20%26%20EDA.ipynb)
 
 ## 🧠 Business Problem
 
